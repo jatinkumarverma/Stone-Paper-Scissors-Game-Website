@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bgcolor: rgb(161, 208, 223);
+    --gamebg:rgb(44, 103, 122);
+    --scoresbg:rgb(189, 231, 245);
+    --scorestext:rgb(37, 90, 107);
+    --hrcolor:rgb(181, 197, 36);
+    --introh1:rgb(161, 208, 223);
+    --playbutton:rgb(13, 172, 124);
+}
+body{
+    text-align: center;
+    background-color:var(--bgcolor);
+    font-family: 'Indie Flower', cursive;
+}
+.game {
+    background-color:var(--gamebg);
+    margin:auto;
+    padding:10px;
+    position: relative;
+    height:100vh;
+}
+.scores {
+    background-color:var(--scoresbg);
+    color: var(--scorestext);
+    display: flex;
+    justify-content:space-around;
+    padding:10px;
+    border-radius: 6px;
+    opacity: 0;
+}
+.scores h2 {
+    font-size: 28px;
+}
+.scores hr {
+    margin-top:5px;
+    border-color:var(--hrcolor);
+}
+.scores p {
+    font-size: 24px;
+    font-weight: bold;
+    color:var(--hrcolor);
+    display: inline-block;
+    background-color:rgb(221, 239, 252);
+    border-radius: 50%;
+    min-width: 30px;
+    margin-top: 10px;
+
+ }
+
+.intro {
+    display: flex;
+    height:50vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.intro h1 {
+    color: var(--introh1);
+    margin:20px;
+    font-size: 3em;
+}
+.intro button {
+    border:none;
+    cursor: pointer;
+    border-radius: 6px;
+    background-color:var(--playbutton);
+    color:white;
+    font-weight: bolder;
+    height:50px;
+    width: 150px; 
+    z-index: 99; 
+}
+.match{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+}
+.winner {
+    color:var(--introh1);
+    text-align: center;
+    font-size: 2.5em;
+}
+.hands,.options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+}
+.player-hand {
+    transform:rotateY(180deg);
+}
+.options button {
+    border:none;
+    cursor: pointer;
+    border-radius: 6px;
+    background-color:var(--playbutton);
+    color:white;
+    font-weight: bolder;
+    height:40px;
+    width: 80px;
+}
+div.fadeOut {
+    opacity:0;
+    pointer-events:none;
+}
+div.fadeIn {
+    opacity: 1;
+    pointer-events:all;
+}
